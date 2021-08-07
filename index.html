@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div id="logo">
+                <img src="img/logo1.png" alt="SpamClean logo">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                        <span></span><span></span><span></span><span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        About
+                        <span></span><span></span><span></span><span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Contact
+                        <span></span><span></span><span></span><span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Download
+                        <span></span><span></span><span></span><span></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1 id="heading">Lorem ipsum dolor sit amet</h1>
+            <p id="data">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, obcaecati. Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. Atque, vitae. Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Voluptas, est?</p>
+        </div>
+        <div class="content1">
+            <img src="img/undraw_welcome_3gvl.svg" alt="Welcome SVG">
+        </div>
+        <div class="search">
+        </div>
+        <div class="dwnbtn">
+            <button id="button" class="ready" onclick="clickButton();">
+                <div class="message submitMessage">
+                    <i class="fas fa-download"></i>
+                    <span class="button-text" id="default">Download Here</span>
+                </div>
+
+                <div class="message loadingMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 17">
+                    <circle class="loadingCircle" cx="2.2" cy="10" r="1.6" />
+                    <circle class="loadingCircle" cx="9.5" cy="10" r="1.6" />
+                    <circle class="loadingCircle" cx="16.8" cy="10" r="1.6" />
+                    </svg>
+                </div>
+                <div class="message successMessage">
+                    <i class="fas fa-check-circle showtick"></i>
+                    <span class="button-text" id="success">Downloaded</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById('button');
+
+        clickButton = () => {
+            button.classList.add('loading');
+            button.classList.remove('ready');
+            document.getElementById("default").style.display = "none";
+            setTimeout(() => {
+                button.classList.add('complete');
+                button.classList.remove('loading');
+                document.getElementById("success").style.display = "inline-block";
+                setTimeout(() => {
+                    document.getElementById("default").style.display = "inline-block";
+                    document.getElementById("success").style.display = "none";
+                    button.classList.add('ready');
+                    button.classList.remove('complete');
+                }, 5000);
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
