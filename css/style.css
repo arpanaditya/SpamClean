@@ -40,9 +40,6 @@ nav > #logo > img {
   left: 6rem;
 }
 
-.content:hover {
-  border: 4px solid rgb(183, 38, 202);
-}
 .content > #heading {
   padding: 1.5rem;
 }
@@ -290,3 +287,45 @@ ul li a span:nth-child(3) {
 ul li a span:nth-child(4) {
   --n: 4;
 }
+
+/* border hover effect */
+
+.btn.effect {
+  color:white;
+}
+
+.btn.effect.effect::after, 
+.btn.effect.effect::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 3px solid rgb(183, 38, 202);
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.btn.effect.effect::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: rgb(183, 38, 202);
+  border-right-color: rgb(183, 38, 202);
+}
+
+.btn.effect.effect::before {
+  top: 0;
+  left: 0;
+  border-top-color: rgb(183, 38, 202);
+  border-left-color: rgb(183, 38, 202);
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.btn.effect.effect:hover::after, 
+.btn.effect.effect:hover::before {
+  width: 100%;
+  height: 100%;
+} 
