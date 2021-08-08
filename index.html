@@ -9,31 +9,32 @@
     <meta name="description" content="Free and safe spam mail cleaner">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>SpamClean</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="one">
         <nav>
             <div id="logo">
                 <img src="img/logo.png" alt="SpamClean logo">
             </div>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="#one">
                         Home
                         <span></span><span></span><span></span><span></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#about">
                         About
                         <span></span><span></span><span></span><span></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#contact">
                         Contact
                         <span></span><span></span><span></span><span></span>
                     </a>
@@ -47,10 +48,9 @@
             </ul>
         </nav>
         <div class="content btn effect">
-            <h1 id="heading">Lorem ipsum dolor sit amet</h1>
-            <p id="data">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, obcaecati. Lorem ipsum dolor
-                sit amet, consectetur adipisicing elit. Atque, vitae. Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Voluptas, est?</p>
+            <h1 id="heading">Welcome to Spam Clean</h1>
+            <p id="data">It is completely free, automated and safe spam cleaner. All you have to do is just to put the
+                keyword or the website name</p>
         </div>
         <div class="content1">
             <img src="img/undraw_welcome_3gvl.svg" alt="Welcome SVG">
@@ -66,9 +66,9 @@
 
                 <div class="message loadingMessage">
                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 19 17">
-                    <circle class="loadingCircle" cx="2.2" cy="10" r="1.6" />
-                    <circle class="loadingCircle" cx="9.5" cy="10" r="1.6" />
-                    <circle class="loadingCircle" cx="16.8" cy="10" r="1.6" />
+                        <circle class="loadingCircle" cx="2.2" cy="10" r="1.6" />
+                        <circle class="loadingCircle" cx="9.5" cy="10" r="1.6" />
+                        <circle class="loadingCircle" cx="16.8" cy="10" r="1.6" />
                     </svg>
                 </div>
                 <div class="message successMessage">
@@ -78,6 +78,90 @@
             </button>
         </div>
     </div>
+    <div class="container1">
+        <div id="about">
+            <i class="fas fa-user-shield"></i>
+            <h1>About Spam Clean</h1>
+            <h3>The Problem: </h3>
+            <p id="content">Spam has been a problem for many decades. But unlike the virus, not all organizations are
+                investing in
+                their cyber defense to effectively block them from their network explicitly. Thus creating a gap for
+                them to increase their activity.</p>
+        </div>
+        <div id="about1">
+            <i class="fab fa-chrome"></i>
+            <h3>The Solution: </h3>
+            <p id="content1">To solve this evolving problem we team have developed a spam cleaner. It is completely
+                automated and safe.
+                This is a web app using the Gmail API to automatically and permanently delete SPAM and/or TRASH from
+                your
+                Gmail folders at any interval you want to set. Normally these folders delete every 30 days but you can
+                change that to every minute or every day or however often you like.</p>
+        </div>
+    </div>
+
+    <div class="swiper-container container3" id="contact">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-container">
+                    <div class="slide-card text-center">
+                        <div class="slide-card-body">
+                            <h5>Aditya Arpan <br />
+                                <span> Web Developer </span>
+                            </h5>
+                            <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-container">
+                    <div class="slide-card text-center">
+                        <div class="slide-card-body">
+                            <h5>Chung Thai Nguyen <br />
+                                <span> Programmer </span>
+                            </h5>
+                            <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-container">
+                    <div class="slide-card text-center">
+                        <div class="slide-card-body">
+                            <h5>Chandu vadde <br />
+                                <span> Designer </span>
+                            </h5>
+                            <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-container">
+                    <div class="slide-card text-center">
+                        <div class="slide-card-body">
+                            <h5>Shuja Waraich <br />
+                                <span> Content Writer </span>
+                            </h5>
+                            <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script>
         const button = document.getElementById('button');
 
@@ -97,6 +181,42 @@
                 }, 5000);
             }, 3000);
         }
+
+        const swiper = new Swiper('.swiper-container', {
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            autoplay:
+            {
+                delay: 2000,
+            },
+            loop: true,
+
+            // Default parameters
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+            roundLengths: true,
+            loop: true,
+            loopAdditionalSlides: 30,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 0
+                }
+            }
+        });
     </script>
 </body>
 
